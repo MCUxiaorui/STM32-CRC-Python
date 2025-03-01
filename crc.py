@@ -18,6 +18,7 @@ def stm32_crc32(data_bytes):
     return crc  # Remove the final XOR
 
 # Test Cases
+# Note: For 0x12345678, the format here should be b'\x78\x56\x34\x12'
 data1 = b'\x00\x00\x00\x00'
 print(hex(stm32_crc32(data1)))  # Output: 0xc704dd7b (matches expectation)
 
